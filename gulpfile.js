@@ -40,7 +40,8 @@ gulp.task('webserver', function() {
     .pipe(webserver({
       livereload: true,
       directoryListing: false,
-      open: false
+      open: false,
+      port: 3000
     }));
 });
 

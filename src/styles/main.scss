@@ -1,5 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 ul {
@@ -7,3 +9,21 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+// Includes
+@import 'hero-banner';
+@import 'programming';
+@import 'schedule';
+@import 'location';
+@import 'partners';
+@import 'footer';
