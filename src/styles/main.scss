@@ -1,7 +1,7 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  padding: 0;
+	box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -21,6 +21,7 @@ p {
 }
 
 // Includes
+@import 'colors';
 @import 'hero-banner';
 @import 'programming';
 @import 'schedule';

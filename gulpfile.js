@@ -2,13 +2,14 @@ var gulp = require('gulp'),
  jade = require('gulp-jade'),
  uglify = require('gulp-uglify'),
  sass = require('gulp-sass'),
- webserver = require('gulp-webserver');
+ webserver = require('gulp-webserver'),
+ imagemin = require('gulp-imagemin');
 
 var env = process.env.NODE_ENV || 'dev';
 var outputDir = 'build/dev';
 
 gulp.task('jade', function() {
-  return gulp.src('src/templates/**/*.jade')
+  return gulp.src('src/templates/index.jade')
     .pipe(jade())
     .pipe(gulp.dest(outputDir));
 });
@@ -35,6 +36,12 @@ gulp.task('sass', function() {
     .pipe(gulp.dest(outputDir + '/styles'));
 });
 
+gulp.task('images', () =>
+  gulp.src('src/styles/assets/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('build/dev/styles/assets'))
+);
+
 gulp.task('webserver', function() {
   gulp.src('build/dev')
     .pipe(webserver({
@@ -45,7 +52,7 @@ gulp.task('webserver', function() {
     }));
 });
 
-gulp.task('default', ['webserver','jade', 'scripts', 'sass']);
+gulp.task('default', ['webserver','jade', 'scripts', 'sass', 'images']);
 gulp.watch('src/templates/*.jade', ['jade']);
 gulp.watch('src/styles/*.scss', ['sass']);
 gulp.watch('src/js/*.js', ['scripts']);
