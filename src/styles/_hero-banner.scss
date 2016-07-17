@@ -1,7 +1,27 @@
 .hero-banner {
-	background-image: url('assets/logo_plus_text.svg');
+	background-image: url('assets/bg_1.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 580px;
+	background-size: 130%;
+	height: 100vh;
 	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-image {
+	height: 300px;
+	width: 100%;
+	margin: 0 20%;
+}
+
+#getting-started {
+	height: 160px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	font-size: 40px;
+	transform: translateX(-50%);
 }
