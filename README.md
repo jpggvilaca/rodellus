@@ -1,2 +1,4 @@
 ## Rodellus Music Festival
-# Clone project - run npm install - run gulp
+### Clone project
+### Run npm install
+### Run gulp
