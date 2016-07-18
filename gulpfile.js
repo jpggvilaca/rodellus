@@ -5,8 +5,8 @@ var gulp = require('gulp'),
  webserver = require('gulp-webserver'),
  imagemin = require('gulp-imagemin');
 
-var env = process.env.NODE_ENV || 'dev';
-var outputDir = 'build/dev';
+var env = process.env.NODE_ENV || 'prod';
+var outputDir = 'build/prod';
 
 gulp.task('jade', function() {
   return gulp.src('src/templates/index.jade')

@@ -3,24 +3,44 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 130%;
-	height: 100vh;
+	height: calc(100vh - 120px);
 	width: 100%;
 	position: relative;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	flex-wrap: wrap;
+	padding-top: 120px;
+
+	@media(max-width: 640px) {
+		background-size: auto;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	> * {
+		width: 100%;
+	}
 }
 
 .hero-image {
 	height: 300px;
 	width: 100%;
 	margin: 0 20%;
+
+	@media(max-width: 640px) {
+		height: 150px;
+		margin: 0;
+	}
 }
 
 #getting-started {
-	height: 160px;
-	font-size: 40px;
+	color: #fff;
+	font-size: 68px;
+
+	@media(max-width: 640px) {
+		font-size: 38px;
+		margin: 40px 0;
+	}
 }
 
 .info {
@@ -28,8 +48,14 @@
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+}
 
-    h1 {
-    	flex: 1 1 100%;
-    }
+.contact {
+	display: flex;
+	justify-content: center;
+
+	img {
+		width: 44px;
+		height: 44px;
+	}
 }
