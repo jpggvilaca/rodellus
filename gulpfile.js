@@ -5,8 +5,8 @@ var gulp = require('gulp'),
  webserver = require('gulp-webserver'),
  imagemin = require('gulp-imagemin');
 
-var env = process.env.NODE_ENV || 'prod';
-var outputDir = 'build/prod';
+var env = process.env.NODE_ENV || 'dev';
+var outputDir = 'build/dev';
 
 gulp.task('jade', function() {
   return gulp.src('src/templates/index.jade')
@@ -27,7 +27,7 @@ gulp.task('sass', function() {
     config.sourceComments = 'map';
   }
 
-  if(env === 'prod') {
+  if(env === 'dev') {
     config.outputStyle = 'compressed';
   }
 
